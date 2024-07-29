@@ -104,13 +104,13 @@ footer{
     }
     
     footer p a{
-        color: white;
+        color: orange;
         text-decoration: underline;
     }
     
     
     footer p a:hover{
-        color: crimson;
+        color: orangered;
         text-decoration: underline;
     }
 
