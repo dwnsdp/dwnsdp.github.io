@@ -9,10 +9,6 @@
 }
 .bold{
     color: orange;
-    font-weight: 700;
-    font-size: 70px;
-    margin-bottom: 30px;
-    line-height: 70px;
 }
 .links a:hover{
     color: orange;
