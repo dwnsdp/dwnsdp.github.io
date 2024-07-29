@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 *,body{
-    font-family: Poppins, Inter, Arial, Helvetica, sans-serif;;
-    
-    
+    font-family: Poppins, Arial, Helvetica, sans-serif;;
 }
 
 .brand{
@@ -45,13 +44,12 @@
 }
  article{
      max-width: 600px;
-     height: 200px; 
+     height: 200px;
      
          
 }
 
 .card{
-    
     padding-top: 10px;
     border-left: 7px solid orange;
 }
