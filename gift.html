@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #f0c27b, #4b1248);
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .noise-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('noise.jpg') repeat;
+            opacity: 1;
+            mix-blend-mode: normal;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 12px 20px;
+            margin-right: 10px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            outline: none;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus {
+            border-color: #4b1248;
+            box-shadow: 0 0 8px rgba(75, 18, 72, 0.3);
+        }
+
+        button {
+            background-color: #4b1248;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            font-family: inherit;
+        }
+
+        button:hover {
+            background-color: #2a0930;
+            box-shadow: 0 4px 10px rgba(42, 9, 48, 0.2);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="codeInput" placeholder="Enter a code">
+    <button onclick="checkCode()">Submit</button>
+    <script>
+        function checkCode() {
+            const inputElement = document.getElementById("codeInput");
+            const code = inputElement.value;
+            // I cannot be bothered to do this properly so I guess you win
+            if (code === "iamanidiot123") {
+                window.location.href = "https://drive.google.com/file/d/1jAzaIUS9u0MYb1ixWjslcC8y0RwZmITz/view?usp=drive_link";
+            } else {
+                inputElement.value = "";
+                inputElement.placeholder = "nope";
+            }
+        }
+
+        document.getElementById("codeInput").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                checkCode();
+            }
+        });
+    </script>
+</body>
+</html>
